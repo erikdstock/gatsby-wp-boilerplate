@@ -1,0 +1,35 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.73",
+    "gatsby-link": "^1.6.22",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-source-wordpress": "^2.0.28"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o public/docs"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.13",
+    "@storybook/addon-knobs": "^3.2.13",
+    "@storybook/addon-notes": "^3.2.13",
+    "@storybook/addon-options": "^3.2.13",
+    "@storybook/react": "^3.2.13",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "prettier": "^1.7.4",
+    "storybook-readme": "^3.0.6"
+  }
+}
