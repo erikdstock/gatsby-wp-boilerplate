@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Marquee from '../Marquee';
 
-storiesOf('Button', module)
+storiesOf('Marquee', module)
   .add('with text', () => (
     <Marquee>We Will Win</Marquee>
   ))

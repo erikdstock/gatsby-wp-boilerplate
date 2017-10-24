@@ -15,7 +15,7 @@ const Marquee = styled(marquee)`
   color: ${colors.white};
   border: 2px solid ${colors.black};
   border-radius: 4px;
-  width: 20%;
+  width: 30%;
   min-width: 100px;
   height: 2em;
   display: flex;
