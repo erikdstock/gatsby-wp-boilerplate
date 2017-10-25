@@ -13,20 +13,26 @@ const PostLink = styled(Link)`
   }
   `
 
-const IndexPage = ({data}) => (
-  <div>
+const IndexPage = ({data}) => {
+  const posts = data.allWordpressPost.edges.map((post) => post.node)
+  return <div>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
-    <Marquee>Posts 🌹 from 🎩 Wordpress 🐬</Marquee>
-    {
-      data.allWordpressPost.edges.map((post) => (
-        <PostLink key={post.node.id} to={`/posts/${post.node.slug}`}>{post.node.title}</PostLink>
-      ))
+    <Marquee>Posts from Wordpress:</Marquee>
+    { posts.length === 0
+      ? "No Posts 😔"
+      : (
+        <ul> {
+          posts.map((post) => (
+            <li> <PostLink key={post.id} to={`/posts/${post.slug}`}>{post.title}</PostLink> </li>
+          ))
+        }</ul>
+      )
     }
   </div>
-)
+  }
 
 IndexPage.propTypes = {
   data: PropTypes.object
