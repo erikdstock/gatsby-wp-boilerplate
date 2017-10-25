@@ -1,7 +1,7 @@
 require('dotenv').config()
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Boilerplate Website.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,7 +28,7 @@ module.exports = {
         // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
         // This feature is untested for sites hosted on Wordpress.com.
         // Defaults to true.
-        useACF: true,
+        useACF: true, // I'm pretty sure we can turn this off
         auth: {
           // If auth.user and auth.pass are filled, then the source plugin will be allowed
           // to access endpoints that are protected with .htaccess.
@@ -41,8 +41,8 @@ module.exports = {
           // then add your clientId, clientSecret, username, and password here
           wpcom_app_clientSecret: process.env.WPCOM_CLIENT_SECRET,
           wpcom_app_clientId: process.env.WPCOM_CLIENT_ID,
-          // wpcom_user: process.env.WPCOM_USER,'gatsbyjswpexample@gmail.com',
-          // wpcom_pass: process.env.WPCOM_PASSWORD,'very-secured-password',
+          wpcom_user: process.env.WPCOM_USER,
+          wpcom_pass: process.env.WPCOM_PASSWORD,
         },
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 
 import './index.css'
 
-const Header = () => (
+const Header = ({title}) => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -27,14 +27,14 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          {title}
         </Link>
       </h1>
     </div>
   </div>
 )
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
+    <Header title={ data.site.siteMetadata.title } />
     <div
       style={{
         margin: '0 auto',
@@ -59,6 +59,17 @@ const TemplateWrapper = ({ children }) => (
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  data: PropTypes.object
 }
 
 export default TemplateWrapper
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

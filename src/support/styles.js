@@ -1,4 +1,4 @@
-// DSA Styles go here.
+// Styles go here.
 
 export const colors = {
   red: '#EC1F27',
