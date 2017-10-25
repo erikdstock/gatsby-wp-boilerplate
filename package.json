@@ -28,6 +28,7 @@
     "@storybook/addon-notes": "^3.2.13",
     "@storybook/addon-options": "^3.2.13",
     "@storybook/react": "^3.2.13",
+    "dotenv": "^4.0.0",
     "gatsby-plugin-styled-components": "^1.0.5",
     "prettier": "^1.7.4",
     "storybook-readme": "^3.0.6"
